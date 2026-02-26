@@ -1,0 +1,14 @@
+---
+description: Enforces snake_case naming and vertical whitespace standards
+globs: "**/*"
+alwaysApply: true
+---
+
+# Style & Naming Standards
+
+- **File Naming:** Always use snake_case (`_`) for filenames (e.g., `data_loader.py`).
+- **Whitespace:** Use sufficient vertical whitespace. One blank line between logical blocks; two blank lines between top-level classes/functions.
+- **Comments:** Avoid redundant "what" comments. Focus on "why" for complex logic only.
+- **Conciseness:** Do not use over-specific variable names (e.g., use `user` instead of `user_object_from_api`).
+- **Docstrings:** Use standard formats (JSDoc/Docstrings) but keep them brief. List params and return types.
+- **General:** Prefer simple, readable code. Use modern syntax (optional chaining, f-strings, etc.).

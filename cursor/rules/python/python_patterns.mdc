@@ -1,0 +1,31 @@
+---
+description: General Python coding patterns and conventions
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Python Patterns
+
+## Code Style
+
+- Use type hints for function signatures.
+- Prefer `pathlib.Path` over string paths for file operations.
+- Use `dataclasses` or `NamedTuple` for structured data when appropriate.
+- Prefer list/dict comprehensions over manual loops when readable.
+
+## Structure
+
+- Use virtual environments; document dependencies in `requirements.txt` or `pyproject.toml`.
+- Keep modules focused; split large files by responsibility.
+- Prefer explicit imports over `*`; group stdlib, third-party, and local imports.
+
+## Error Handling
+
+- Catch specific exceptions; avoid bare `except:`.
+- Use context managers (`with`) for resources (files, connections).
+- Re-raise with `raise ... from e` to preserve chain when appropriate.
+
+## Testing
+
+- Use `pytest` for unit tests. Prefer `assert` over custom checks.
+- Keep test data small and deterministic when possible.
