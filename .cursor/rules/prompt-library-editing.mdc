@@ -11,8 +11,9 @@ You are helping edit this repository – a store of reusable prompts, rules, and
 
 - **cursor/** – Cursor rules and agents. Symlink as `.cursor` in Cursor projects.
   - `cursor/rules/global/` – Always-on rules (naming, style, whitespace).
-  - `cursor/rules/<language-or-domain>/` – File-specific rules. One folder per language or use case (e.g., `python/`, `javascript/`, `rust/`). Use `globs` in frontmatter to target file patterns.
-  - `cursor/rules/task/` – Task agents invoked for specific workflows (cleanup, docs, study, etc.).
+  - `cursor/rules/<language-or-domain>/` – File-specific rules. One folder per language or use case.
+  - `cursor/rules/task/` – Task agents (cleanup, docs, project_setup, etc.). Cursor-specific.
+- **copilot/** – GitHub Copilot instructions and project setup.
 - **.cursor/** – Repo-level instructions (this file). Only applies when editing this repo.
 
 ## When Adding or Editing Content
@@ -33,9 +34,13 @@ You are helping edit this repository – a store of reusable prompts, rules, and
 - Add new agents as `cursor/rules/task/<name>.md`.
 - Use clear role titles and structured directives (Objective, Core Directives, etc.).
 
-### Other Prompt Collections
+### Copilot
 
-- Add new top-level folders for other prompt types (e.g., `claude/`, `prompts/`) as needed. Document usage in their README.
+- Edit `copilot/project_setup.md` for Copilot setup. Optionally fetches `VisualStudioCode.gitignore` when the project uses Copilot in VS Code.
+
+### Other Collections
+
+- Add top-level folders for other tools (e.g., `claude/`) as needed. Document usage in their README.
 
 ### General
 
