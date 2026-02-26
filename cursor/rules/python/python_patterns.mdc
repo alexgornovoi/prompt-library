@@ -27,5 +27,5 @@ alwaysApply: false
 
 ## Testing
 
-- Use `pytest` for unit tests. Prefer `assert` over custom checks.
-- Keep test data small and deterministic when possible.
+- Prefer pytest; use `assert` over custom checks.
+- Keep test data small and deterministic.

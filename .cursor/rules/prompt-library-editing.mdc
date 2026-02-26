@@ -47,3 +47,4 @@ You are helping edit this repository – a store of reusable prompts, rules, and
 - Update the relevant README when adding content.
 - Follow conventions in `style_guide.mdc` (snake_case filenames, etc.).
 - Keep each file focused on a single concern.
+- Reference existing rules as examples; avoid duplicating structure.

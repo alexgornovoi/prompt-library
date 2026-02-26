@@ -58,6 +58,11 @@ alwaysApply: false
 
 Reference files in rules with `@filename.ts` to include them in context.
 
+## Rule semantics: hints vs strict constraints
+
+- **Without run:** The AI treats rules as hints or contextual knowledge about your style. It may follow them but not always (statistical probability).
+- **With run:** Use `run:` to mark a strict constraint—a command or action that must be followed precisely. Example: `run: npm run lint before committing`.
+
 ## Glob examples
 
 | Pattern | Matches |
@@ -75,6 +80,24 @@ Reference files in rules with `@filename.ts` to include them in context.
 2. Project Rules (`.cursor/rules/`)
 3. User Rules (global settings)
 4. Legacy `.cursorrules`
+
+## Best practices
+
+Good rules are focused, actionable, and scoped.
+
+- Keep rules under 500 lines
+- Split large rules into multiple, composable rules
+- Provide concrete examples or referenced files
+- Avoid vague guidance. Write rules like clear internal docs
+- Reuse rules when repeating prompts in chat
+- Reference files instead of copying their contents—this keeps rules short and prevents them from becoming stale as code changes
+
+### What to avoid
+
+- **Copying entire style guides:** Use a linter instead. Agent already knows common style conventions.
+- **Documenting every possible command:** Agent knows common tools like npm, git, and pytest.
+- **Adding instructions for edge cases that rarely apply:** Keep rules focused on patterns you use frequently.
+- **Duplicating what's already in your codebase:** Point to canonical examples instead of copying code.
 
 ## AGENTS.md
 

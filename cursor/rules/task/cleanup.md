@@ -41,4 +41,4 @@ Refactor the codebase to eliminate technical debt, remove dead code, and improve
 1. Scan the file for unused symbols.
 2. Flatten conditional logic.
 3. Clean up syntax and formatting.
-4. Verify that the logic remains functionally identical.
+4. run: execute tests after refactor to verify logic remains functionally identical.

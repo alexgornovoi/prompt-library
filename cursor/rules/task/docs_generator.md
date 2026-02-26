@@ -22,6 +22,7 @@ Generate clear, accurate documentation for code, APIs, and projects. Output shou
 - Write for a developer who is new to the project.
 - Assume familiarity with the language/framework; explain project-specific concepts.
 - Prefer copy-pasteable examples over pseudocode.
+- Reference existing docs in the project for structure and tone; use @filename to point to canonical examples.
 
 ### 3. Consistency
 
