@@ -1,0 +1,83 @@
+{
+  "specVersion": "0.1",
+  "name": "prompt-library",
+  "version": "0.1.0",
+  "modules": [
+    {
+      "id": "foundation.overview",
+      "path": "modules/foundation/overview.md",
+      "priority": 100
+    },
+    {
+      "id": "standards.style_naming",
+      "path": "modules/standards/style_naming.md",
+      "priority": 110
+    },
+    {
+      "id": "languages.python.patterns",
+      "path": "modules/languages/python/patterns.md",
+      "priority": 120,
+      "apply": {
+        "default": {
+          "mode": "glob",
+          "globs": [
+            "**/*.py"
+          ],
+          "description": "Apply for Python files"
+        }
+      }
+    },
+    {
+      "id": "tasks.project_setup",
+      "path": "modules/tasks/project_setup.md",
+      "priority": 130,
+      "apply": {
+        "default": {
+          "mode": "manual",
+          "description": "Invoke when bootstrapping a repository"
+        }
+      }
+    },
+    {
+      "id": "tasks.documentation",
+      "path": "modules/tasks/documentation.md",
+      "priority": 140,
+      "apply": {
+        "default": {
+          "mode": "manual",
+          "description": "Invoke when generating or updating documentation"
+        }
+      }
+    },
+    {
+      "id": "tasks.cleanup_refactor",
+      "path": "modules/tasks/cleanup_refactor.md",
+      "priority": 150,
+      "apply": {
+        "default": {
+          "mode": "manual",
+          "description": "Invoke for dead-code cleanup and refactors"
+        }
+      }
+    },
+    {
+      "id": "integrations.ai_assistant_setup",
+      "path": "modules/integrations/ai_assistant_setup.md",
+      "priority": 160
+    }
+  ],
+  "exports": {
+    "default": {
+      "include": [
+        "**"
+      ]
+    },
+    "core": {
+      "include": [
+        "foundation.*",
+        "standards.*",
+        "languages.*"
+      ]
+    }
+  }
+}

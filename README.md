@@ -1,15 +1,27 @@
 # Prompt Library
 
-A repo for storing reusable prompts, rules, and agents. Agent-specific collections:
+A repo for reusable prompts, rules, and agents organized by concern (tool-agnostic first).
 
-## Collections
+## Module Collections
 
-- **cursor/** – Cursor rules and agents. Symlink as `.cursor` in projects. See [cursor/README.md](cursor/README.md).
-- **copilot/** – GitHub Copilot instructions and setup. See [copilot/README.md](copilot/README.md).
-- **.cursor/** – Repo instructions for editing this library.
+- **foundation/** - Shared baseline guidance.
+- **standards/** - Naming and style conventions.
+- **languages/** - Language-specific patterns.
+- **tasks/** - Task-invoked agents (setup, docs, cleanup).
+- **integrations/** - Platform integration notes.
 
-## Cursor quick setup
+## Install with rulepack
+
+Use this repo as a Rule Pack source dependency:
 
 ```bash
-ln -s ~/path/to/prompt-library/cursor .cursor
+rulepack add <git-url-to-this-repo> --export default --ref <tag-or-commit>
+rulepack install
+rulepack build
 ```
+
+Named exports:
+
+- `default` - all modules
+- `core` - `foundation.*`, `standards.*`, `languages.*`
+- `standards`, `tasks`, `integrations`, etc. - implicit folder exports (no explicit export needed)

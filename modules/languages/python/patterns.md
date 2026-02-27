@@ -1,9 +1,3 @@
----
-description: General Python coding patterns and conventions
-globs: "**/*.py"
-alwaysApply: false
----
-
 # Python Patterns
 
 ## Code Style
