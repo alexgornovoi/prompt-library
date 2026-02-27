@@ -10,18 +10,35 @@ A repo for reusable prompts, rules, and agents organized by concern (tool-agnost
 - **tasks/** - Task-invoked agents (setup, docs, cleanup).
 - **integrations/** - Platform integration notes.
 
-## Install with rulepack
+## Use with rulepack
 
-Use this repo as a Rule Pack source dependency:
+Use this prompt-library from git:
 
 ```bash
-rulepack add <git-url-to-this-repo> --export default --ref <tag-or-commit>
-rulepack install
+rulepack deps add https://github.com/alexgornovoi/rule-pack.git --export default --ref main
+rulepack deps install
 rulepack build
 ```
 
-Named exports:
+Use this prompt-library locally (from the `rule-pack` repo root):
 
-- `default` - all modules
-- `core` - `foundation.*`, `standards.*`, `languages.*`
-- `standards`, `tasks`, `integrations`, etc. - implicit folder exports (no explicit export needed)
+```bash
+rulepack deps add --local ./prompt-library --export default
+rulepack deps install
+rulepack build
+```
+
+Use only the core export:
+
+```bash
+rulepack deps add --local ./prompt-library --export core
+rulepack deps install
+rulepack build
+```
+
+Exports in this repo:
+
+- `default`: all modules
+- `core`: `foundation.*`, `standards.*`, `languages.*`
+
+If `--export` is omitted, `default` is used.
