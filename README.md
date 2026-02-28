@@ -36,9 +36,18 @@ rulepack deps install
 rulepack build
 ```
 
+Use only Python + shared repo standards:
+
+```bash
+rulepack deps add --local ./prompt-library --export python
+rulepack deps install
+rulepack build
+```
+
 Exports in this repo:
 
 - `default`: all modules
 - `core`: `foundation.*`, `standards.*`, `languages.*`
+- `python`: `foundation.*`, `standards.*`, `languages.python.*`
 
 If `--export` is omitted, `default` is used.

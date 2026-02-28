@@ -78,6 +78,13 @@
         "standards.*",
         "languages.*"
       ]
+    },
+    "python": {
+      "include": [
+        "foundation.*",
+        "standards.*",
+        "languages.python.*"
+      ]
     }
   }
 }
