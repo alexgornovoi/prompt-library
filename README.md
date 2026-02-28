@@ -15,7 +15,7 @@ A repo for reusable prompts, rules, and agents organized by concern (tool-agnost
 Use this prompt-library from git:
 
 ```bash
-rulepack deps add https://github.com/alexgornovoi/rule-pack.git --export default --ref main
+rulepack deps add https://github.com/alexgornovoi/prompt-library --export default --ref main
 rulepack deps install
 rulepack build
 ```
