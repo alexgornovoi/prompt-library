@@ -64,6 +64,21 @@
       "id": "integrations.ai_assistant_setup",
       "path": "modules/integrations/ai_assistant_setup.md",
       "priority": 160
+    },
+    {
+      "id": "spec_driven.spec_workflow",
+      "path": "modules/spec_driven/spec_workflow.md",
+      "priority": 170
+    },
+    {
+      "id": "spec_driven.decisions",
+      "path": "modules/spec_driven/decisions.md",
+      "priority": 171
+    },
+    {
+      "id": "spec_driven.sprint_files",
+      "path": "modules/spec_driven/sprint_files.md",
+      "priority": 172
     }
   ],
   "exports": {
@@ -84,6 +99,13 @@
         "foundation.*",
         "standards.*",
         "languages.python.*"
+      ]
+    },
+    "spec_driven": {
+      "include": [
+        "foundation.*",
+        "standards.*",
+        "spec_driven.*"
       ]
     }
   }
